@@ -26,7 +26,7 @@ def home():
 def chat():
     data = request.get_json()
     user_message = data.get('message', '')
-    model_to_use = data.get('model', 'gpt-4o')
+    model_to_use = data.get('model', 'gpt-3.5-turbo')
 
     chat_history.append({"role": "user", "content": user_message})
 
