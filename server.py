@@ -26,7 +26,7 @@ def home():
 def chat():
     data = request.get_json()
     user_message = data.get('message', '')
-    model_to_use = data.get('model', 'gpt-4o-2024-05-13')  # ברירת מחדל
+    model_to_use = data.get('model', 'gpt-4o-2024-08-06')  # ברירת מחדל
 
     chat_history.append({"role": "user", "content": user_message})
 
