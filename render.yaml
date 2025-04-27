@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: chanan-ai-chat
+    env: python
+    buildCommand: ""
+    startCommand: "python server.py"
+    plan: free
