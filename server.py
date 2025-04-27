@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # מפתח OpenAI החדש שהבאת
-openai.api_key = "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"
+openai.api_key = "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"
 
 # היסטוריה כדי לשמור הקשר
 chat_history = [
