@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import openai
 import os
 from dotenv import load_dotenv
+from openai import OpenAI  # שים לב שהשתנה כאן
 
 # Load environment variables
 load_dotenv()
@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Create OpenAI client using the API key
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Initial system prompt for chat
 chat_history = [
@@ -26,7 +26,7 @@ def home():
 def chat():
     data = request.get_json()
     user_message = data.get('message', '')
-    model_to_use = data.get('model', 'gpt-3.5-turbo')
+    model_to_use = data.get('model', 'gpt-3.5-turbo')  # ברירת מחדל
 
     chat_history.append({"role": "user", "content": user_message})
 
