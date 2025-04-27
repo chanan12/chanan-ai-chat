@@ -1,4 +1,4 @@
-requests
-Flask
-openai==0.28
-flask-cors
+requests>=2.32.0
+Flask>=3.1.0
+flask-cors>=4.0.0
+openai>=1.3.7
